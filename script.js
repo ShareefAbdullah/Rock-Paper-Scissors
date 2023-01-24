@@ -11,4 +11,6 @@ function getComputerChoice () {
     }
 
 }
-console.log(getComputerChoice());
+
+let userChoice = prompt().toUpperCase();
+console.log(userChoice);
