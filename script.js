@@ -1,7 +1,7 @@
-let randomNumber = Math.floor(Math.random() * 100) + 1;
-
-
 function getComputerChoice () {
+
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+
     if (randomNumber <= 33){
         return "Rock";
     } else if (randomNumber > 33 && randomNumber < 66){
@@ -12,19 +12,19 @@ function getComputerChoice () {
 
 }
 
-let userChoice = prompt().toUpperCase();
-let playerSelection = userChoice;
-let computerSelection = getComputerChoice()
+function playRound (){
 
-function playRound (playerSelection, computerSelection){
+    let playerSelection = prompt().toUpperCase();
+    let computerSelection = getComputerChoice();
+
     if (playerSelection === "ROCK" && computerSelection === "Paper"){
         return "You lose! Paper beats Rock";
     } else if (playerSelection === "ROCK" && computerSelection === "Scissors"){
         return "You win! Rock beats Scissors";
     } else if (playerSelection === "PAPER" && computerSelection === "Scissors"){
-        return"You lose! Scissors beat Paper";
+        return "You lose! Scissors beat Paper";
     } else if (playerSelection === "PAPER" && computerSelection === "Rock"){
-        return"You win! Paper beats Rock";
+        return "You win! Paper beats Rock";
     } else if (playerSelection === "SCISSORS" && computerSelection === "Rock"){
         return "You lose! Rock beats Scissors";
     } else if (playerSelection ==="SCISSORS" && computerSelection === "Paper"){
@@ -34,5 +34,11 @@ function playRound (playerSelection, computerSelection){
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+function game() {
 
+    for(let i = 0; i < 5; i ++){
+        console.log(playRound());
+    }
+}
+
+game();
