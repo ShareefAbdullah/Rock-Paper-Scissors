@@ -7,9 +7,9 @@ function getComputerChoice () {
 
     if (randomNumber <= 33){
         return "Rock";
-    } else if (randomNumber > 33 && randomNumber < 66){
+    } else if (randomNumber > 33 && randomNumber <= 66){
         return "Paper";
-    } else if (randomNumber >= 66) {
+    } else if (randomNumber > 66 ) {
         return "Scissors";
     }
 
